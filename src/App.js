@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import JSX from './02_JSX'
+import MyComponent from './03_Component'
 
 class App extends Component {
   render() {
@@ -22,6 +23,8 @@ class App extends Component {
           </a>
         </header>
         <JSX/>
+        <MyComponent name="React" age={4}/>
+        <MyComponent name={3}/>
       </div>
     );
   }
