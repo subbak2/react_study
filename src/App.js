@@ -6,9 +6,21 @@ import JSX from './02_JSX';
 import MyComponent from './03_Component';
 import EventHandling from './04_EventHandling';
 import Reference from './05_Reference';
+import Iteration from './06_Iteration'
 
 class App extends Component {
   render() {
+    const chapters = [
+      {title:'2장. JSX', component: <JSX/>},
+      {title:'3장. 컴포넌트', component: <MyComponent name='nankisu' age={26}/>},
+      {title:'4장. 이벤트 핸들링', component: <EventHandling/>},
+      {title:'5장. 레퍼런스', component: <Reference/>},
+      {title:'6장. 컴포넌트 반복', component: <Iteration/>},
+    ];
+
+    const arccodions = chapters.map((chapter, index) => 
+      (<Arccodion key={index} title={chapter.title}>{chapter.component}</Arccodion>));
+
     return (
       <div className="App">
         <header className="App-header">
@@ -17,18 +29,7 @@ class App extends Component {
             [Nankisu's React Study]
           </p>
         </header>
-        <Arccodion title="2장. JSX">
-            <JSX/>
-          </Arccodion>
-          <Arccodion title="3장. 컴포넌트">
-            <MyComponent name="React" age={4}/>
-          </Arccodion>
-          <Arccodion title="4장. 이벤트 핸들링">
-            <EventHandling/>
-          </Arccodion>
-          <Arccodion title="5장. 레퍼런스">
-            <Reference/>
-          </Arccodion>
+        {arccodions}
       </div>
     );
   }
