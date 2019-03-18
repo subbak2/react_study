@@ -1,0 +1,18 @@
+.arccodion{
+    margin: 0;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+}
+
+.arccodion #title{
+    cursor: pointer;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}

@@ -42,7 +42,8 @@ class EventHandling extends Component {
                     value={this.state.message}
                     onChange={this.handleChange}
                     onKeyPress={this.handleKeyPress}/>
-                <button onClick={this.handleClick}>확인</button>
+                <button onClick={this.handleClick}>제출</button>
+                
             </div>
         );
     }
