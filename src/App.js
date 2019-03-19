@@ -8,6 +8,7 @@ import EventHandling from './04_EventHandling';
 import Reference from './05_Reference';
 import Iteration from './06_Iteration';
 import LifeCycle from './07_LifeCycle';
+import FunctionalComponrnt from './08_FunctionalComponent';
 
 class App extends Component {
   render() {
@@ -17,7 +18,8 @@ class App extends Component {
       {title:'4장. 이벤트 핸들링', component: <EventHandling/>},
       {title:'5장. 레퍼런스', component: <Reference/>},
       {title:'6장. 컴포넌트 반복', component: <Iteration/>},
-      {title:'7장. 컴포넌트 라이프사이클', component: <LifeCycle/>}
+      {title:'7장. 컴포넌트 라이프사이클', component: <LifeCycle/>},
+      {title:'8장. 함수형 컴포넌트', component: <FunctionalComponrnt name='nankisu'/>}
     ];
 
     const arccodions = chapters.map((chapter, index) => 
