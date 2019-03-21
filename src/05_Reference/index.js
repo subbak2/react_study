@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import './reference.css';
+import classNames from 'classnames/bind';
+import styles from './reference.scss';
+
+const cx = classNames.bind(styles);
 
 class ValidationSample extends Component{
     state = {
@@ -30,7 +33,7 @@ class ValidationSample extends Component{
                 type="password" 
                 value={this.state.password} 
                 onChange={this.handleChange} 
-                className={this.state.clicked?(this.state.validate?'success':'failure'):''}/>
+                className={this.state.clicked?(this.state.validate?cx('success'):cx('failure')):''}/>
                 <button onClick={this.handleButtonClick}>검증하기</button>
             </div>
         );

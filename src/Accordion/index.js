@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import './arccodion.css';
+import classNames from 'classnames/bind';
+import styles from './arccodion.scss';
+
+const cx = classNames.bind(styles);
 
 class Arccodion extends Component{
     state = {
@@ -14,9 +17,9 @@ class Arccodion extends Component{
 
     render(){
         return(
-            <div className="arccodion">
-                <h3 id="title" onClick={this.ToggleMethod}>{this.props.title}</h3>
-                <div className={this.state.toggle?'show':'hide'}>
+            <div className={cx('arccodion')}>
+                <h3 id={cx('title')} onClick={this.ToggleMethod}>{this.props.title}</h3>
+                <div className={cx({'show':this.state.toggle}, {'hide':!this.state.toggle})}>
                     {this.props.children}
                 </div>
             </div>
