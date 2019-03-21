@@ -10,7 +10,7 @@ import LifeCycle from './07_LifeCycle';
 import FunctionalComponrnt from './08_FunctionalComponent';
 import Styling from './09_Styling';
 import logo from './logo.svg';
-import styles from './App.scss';
+import styles from './App.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -31,9 +31,9 @@ class App extends Component {
       (<Arccodion key={index} title={chapter.title}>{chapter.component}</Arccodion>));
 
     return (
-      <div className={cx("App")}>
-        <header className={cx("App-header")}>
-          <img src={logo} className={cx("App-logo")} alt="logo" />
+      <div className={cx('App')}>
+        <header className={cx('App-header')}>
+          <img src={logo} className={cx('App-logo')} alt="logo" />
           <p>
             [Nankisu's React Study]
           </p>
