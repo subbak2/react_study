@@ -9,6 +9,7 @@ import Iteration from './06_Iteration';
 import LifeCycle from './07_LifeCycle';
 import FunctionalComponrnt from './08_FunctionalComponent';
 import Styling from './09_Styling';
+import ToDoList from './10_ToDoList';
 import logo from './logo.svg';
 import styles from './App.module.scss';
 
@@ -24,7 +25,8 @@ class App extends Component {
       {title:'6장. 컴포넌트 반복', component: <Iteration/>},
       {title:'7장. 컴포넌트 라이프사이클', component: <LifeCycle/>},
       {title:'8장. 함수형 컴포넌트', component: <FunctionalComponrnt name='nankisu'/>},
-      {title:'9장. 컴포넌트 스타일링', component: <Styling/>}
+      {title:'9장. 컴포넌트 스타일링', component: <Styling/>},
+      {title:'10장. 일정관리 웹 어플리케이션', component: <ToDoList/>}
     ];
 
     const arccodions = chapters.map((chapter, index) => 
